@@ -2,12 +2,13 @@ import os
 
 class ConfigurateArch:
     @staticmethod
-    def enable_all():
+    def configurate_all():
         ConfigurateArch.configurate_timezone()
         ConfigurateArch.configurate_lang()
         ConfigurateArch.configurate_host()
         ConfigurateArch.enable_services()
-
+        ConfigurateArch.setup_grub()
+        
     @staticmethod
     def configurate_timezone():
         os.system('ln -sf /usr/share/zoneinfo/Asia/Baku /etc/localtime')
