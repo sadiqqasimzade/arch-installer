@@ -11,7 +11,7 @@ SHELL_UTILS=['bat','calc','lsd','fakeroot','neofetch','tree','dpkg','make','auto
 NETWORK=['networkmanager-openvpn','openvpn','blueman','bluez','bluez-utils','netctl','openssh','sshfs','firefox']
 OFFICE=['libreoffice','zathura','zathura-djvu','zathura-pdf-mupdf',]
 FONTS=['ttf-jetbrains-mono','ttf-jetbrains-mono-nerd','ttf-fira-code','ttf-iosevka-nerd']
-DRIVERS=['mesa', 'lib32-mesa', 'xf86-video-nouveau', 'xf86-video-intel', 'vulkan-intel','intel-ucode','xf86-video-amdgpu','usbutils',]
+DRIVERS=['mesa', 'xf86-video-nouveau', 'xf86-video-intel', 'vulkan-intel','intel-ucode','xf86-video-amdgpu','usbutils',]
 
 
 def main():
