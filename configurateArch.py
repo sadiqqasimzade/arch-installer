@@ -17,17 +17,20 @@ class ConfigurateArch:
         print("If date is correct timezone configurated")
     
     def configurate_lang():
-        os.system('echo -e "en_US.UTF-8 UTF-8 \n ru_RU.UTF-8 UTF-8" >> /etc/locale.gen')
+        os.system('echo -e "en_US.UTF-8 UTF-8 \n ru_RU.UTF-8 UTF-8" > /etc/locale.gen')
         os.system('locale-gen')
-        os.system('echo LANG=en_US.UTF-8 >> /etc/locale.conf')
+        os.system('echo LANG=en_US.UTF-8 > /etc/locale.conf')
         print("Language configurated")
 
     def configurate_host():
         hostname=input('hostname:')
         username=input('username:')
-        os.system(f'echo {hostname} >> /etc/hostname')
+        os.system(f'echo {hostname} > /etc/hostname')
         os.system(f'useradd -m -G wheel -s /bin/bash {username}')
-        print(f'added user "{username}".Dont forget to set password')
+        os.system('passwd')
+        os.system(f'passwd ${username}')
+        os.system("sudo sed -i '/^# %wheel ALL=(ALL:ALL) ALL/ s/^# //' /etc/sudoers")
+        print(f'added user "{username},sudoers configurated"')
     
     def enable_services():
         os.system('systemctl enable NetworkManager')

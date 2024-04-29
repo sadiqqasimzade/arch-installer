@@ -35,9 +35,6 @@ arch-chroot /mnt
 #### Configurating Arch
 Clone this repo and run configurateArch.py
 ```bash
-passwd               #(for root)
-passwd admin         #(for created user)
-EDITOR=micro visudo  #uncomment 1st wheel rule for group members
 exit 
 umount -a
 reboot
