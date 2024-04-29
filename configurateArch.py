@@ -8,7 +8,7 @@ class ConfigurateArch:
         ConfigurateArch.configurate_host()
         ConfigurateArch.enable_services()
         ConfigurateArch.setup_grub()
-        
+
     @staticmethod
     def configurate_timezone():
         os.system('ln -sf /usr/share/zoneinfo/Asia/Baku /etc/localtime')
@@ -38,7 +38,7 @@ class ConfigurateArch:
         os.system('grub-mkconfig -o /boot/grub/grub.cfg')
 
 def main():
-    ConfigurateArch.start()
+    ConfigurateArch.configurate_all()
     print("Basic arch configurated")
 
 
