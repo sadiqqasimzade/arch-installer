@@ -17,7 +17,7 @@ class ConfigurateArch:
         print("If date is correct timezone configurated")
     
     def configurate_lang():
-        os.system('echo -e "en_US.UTF-8 UTF-8 \n ru_RU.UTF-8 UTF-8" > /etc/locale.gen')
+        os.system('echo -e "en_US.UTF-8 UTF-8 \nru_RU.UTF-8 UTF-8" > /etc/locale.gen')
         os.system('locale-gen')
         os.system('echo LANG=en_US.UTF-8 > /etc/locale.conf')
         print("Language configurated")
@@ -27,7 +27,9 @@ class ConfigurateArch:
         username=input('username:')
         os.system(f'echo {hostname} > /etc/hostname')
         os.system(f'useradd -m -G wheel -s /bin/bash {username}')
+        print('root password')
         os.system('passwd')
+        print(f'{username} password')
         os.system(f'passwd ${username}')
         os.system("sudo sed -i '/^# %wheel ALL=(ALL:ALL) ALL/ s/^# //' /etc/sudoers")
         print(f'added user "{username},sudoers configurated"')

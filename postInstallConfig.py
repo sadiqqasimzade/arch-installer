@@ -11,6 +11,7 @@ def main():
     os.system("cp gtkrc-2.0 ~/.gtkrc-2.0")
     os.system("cp xinitrc ~/.xinitrc")
     os.system("cp -r bin/ ~/")
-
+    os.system("cp -r Media/ ~/")
+    
 if __name__ == "__main__":
     main()

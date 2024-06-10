@@ -8,13 +8,9 @@ Xft.lcdfilter:	lcddefault
 Xft.dpi:   100
 
 st.font:         JetBrainsMono Nerd Font:style:medium:pixelsize=20
-
-! window border inner
 st.opacity: 255
 st.borderpx: 10
 
-! Base16 OneDark
-! Scheme: Lalit Magant (http://github.com/tilal6991)
 
 #define base00 #1e222a
 #define base01 #353b45

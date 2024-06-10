@@ -12,34 +12,31 @@ super + Return
 super + p
 	sh $HOME/bin/toggle-polybar
 
-# Set random wallpaper
-super + w
-	sh $HOME/bin/random_wallpaper
-
 # Change language
 Alt_L + shift
-	sh $HOME/bin/change_language.sh
+	sh $HOME/bin/language/change_language.sh
 
 Shift_L + alt
-	sh $HOME/bin/change_language.sh
-    
+	sh $HOME/bin/language/change_language.sh
+
+#Caps_Lock
+#	polybar-msg action "#ipc_keyboard_status.hook.0"
+
 # Launch Rofi Menu
-super + {d,x}
-    {rofi -show drun,sh $HOME/bin/powermenu}
+super + d
+    rofi -show drun
+
+# Launch Power Menu
+super + x
+	sh $HOME/bin/powermenu
+
+# Launch File Manager
+super + e
+	thunar
 
 # Launch Applications
-super + shift + {f,n,p,t,c,v,i,x,q,k,l}
-	{firefox, \
-	thunar, \
-	pavucontrol, \
-	telegram-desktop, \
-	code, \
-	virtualbox, \
-	firefox --private-window, \
-	sh $HOME/bin/xcolor-pick, \
-	sh $HOME/bin/bible, \
-	alacritty -e calcurse, \
-	sh $HOME/bin/screen-lock}
+super + shift + f
+	firefox
      
 # Select window to close
 ctrl + super + alt + k

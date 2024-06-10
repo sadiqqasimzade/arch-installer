@@ -1,14 +1,12 @@
 #! /bin/sh
 
-
 pgrep -x sxhkd > /dev/null || sxhkd &
+echo ~/.config/sxhkd/sxhkdrc | entr -np pkill -USR1 -x sxhkd &
 
-# fix some Java applications
-# wmname LG3D
 
 # workspaces
-bspc monitor primary -d 1 2 3 4 5 6 7
-bspc monitor LVDS-1 -d 7  # TODO: multiple monitors
+bspc monitor primary -d 1 2 3 4 5
+bspc monitor LVDS-1 -d 7
 
 bspc config focus_follows_pointer true
 
@@ -26,7 +24,7 @@ xsetroot -cursor_name left_ptr
 
 # gaps
 bspc config gapless_monocle false
-bspc config window_gap 17
+bspc config window_gap 6
 
 # moving floating windows and resize them with mouse, hold alt key
 bspc config pointer_modifier mod4
@@ -42,8 +40,6 @@ bspc rule -a feh state=floating
 # start resources
 xrdb merge ~/.Xresources
 
-# python script to always initialize with a different wallpaper:
-# TODO: Add loading of basic scripts
 ~/.config/bspwm/scripts/launch.sh &
 ~/.config/polybar/launch.sh
 
@@ -57,6 +53,4 @@ pgrep -x redshift > /dev/null || redshift &
 # start compositor
 picom --config $HOME/.config/bspwm/picom_configurations/1.conf &
 
-# autostart
 flameshot &
-
