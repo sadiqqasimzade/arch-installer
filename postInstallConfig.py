@@ -10,6 +10,9 @@ def main():
     os.system("cp Xresources ~/.Xresources")
     os.system("cp gtkrc-2.0 ~/.gtkrc-2.0")
     os.system("cp xinitrc ~/.xinitrc")
+    os.system("cp -r local ~/.local")
+    os.system("cp -r themes ~/.themes")
+    
     os.system("cp -r bin/ ~/")
     os.system("cp -r Media/ ~/")
     
