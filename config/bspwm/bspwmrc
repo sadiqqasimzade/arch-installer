@@ -40,17 +40,10 @@ bspc rule -a feh state=floating
 # start resources
 xrdb merge ~/.Xresources
 
+# autorun
 ~/.config/bspwm/scripts/launch.sh &
-~/.config/polybar/launch.sh
-
-# launch notification daemon
-dunst -config $HOME/.config/bspwm/dunstrc &
-
-# launch battery tracker and redshift
-pkill battery-alert; ~/bin/battery-alert &
-pgrep -x redshift > /dev/null || redshift &
 
 # start compositor
 picom --config $HOME/.config/bspwm/picom_configurations/1.conf &
 
-flameshot &
+

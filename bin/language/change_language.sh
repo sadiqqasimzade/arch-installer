@@ -28,4 +28,4 @@ if [ "$found" = false ]; then
   notify-send "Lang: $NEXT_LANG" -t 700
 fi
 
-polybar-msg action "#ipc_keyboard_status.hook.0"
+#polybar-msg action "#ipc_keyboard_status.hook.0"
