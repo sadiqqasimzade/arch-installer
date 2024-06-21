@@ -14,6 +14,7 @@ DESKTOP_ENV=['xfce4-power-manager','xfce4-settings','xorg','xorg-xinit','xterm',
              'gpick', #color picker
              'flameshot', #screenshot tool
              'thunar', #file manager
+             "gvfs" #trash bin
             ]
 WM=[
     'bspwm', #window manager

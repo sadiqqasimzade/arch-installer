@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Define the list of languages to cycle through
-LANGUAGES=("en" "ru" "az")
+LANGUAGES=("us" "ru" "az")
 
 # Get the current keyboard layout
 CURRENT_LANG=$(setxkbmap -query | awk -F : '/layout/ {print $2}' | sed 's/ //g')

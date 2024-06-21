@@ -5,7 +5,7 @@ def main():
     os.system("sudo systemctl enable bluetooth.service")
     
     #ssh
-    os.system("sudo systemctl enable ufw.service")
+    os.system("sudo uft enable")
     os.system("sudo ufw allow 22/tcp")
     
     

@@ -5,3 +5,4 @@
 * configurate neovim
 
 
+* Fonts and Themes
